@@ -1,21 +1,24 @@
 import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView, Platform, StatusBar, Image } from 'react-native';
 import tw from 'twrnc';
+import NavOptions from '../components/NavOptions';
 
-const HomeScreen = () => {
+const HomeScreen = () => { 
   return (
     <SafeAreaView style={[
       tw`bg-white h-full`, styles.AndroidSafeArea
     ]}>
       <View style={tw`p-5`}>
-      <Image
+        <Image
           style={{
             width: 100, height: 100, resizeMode: 'contain'
           }}
           source={{
             uri: "https://links.papareact.com/gzs",
           }}
-        />         
+        /> 
+
+        <NavOptions /> 
       </View>
     </SafeAreaView>
   );
@@ -28,5 +31,5 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "white",
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
-  }
+  },
 });
