@@ -36,14 +36,16 @@ const HomeScreen = () => {
           }}
           onPress={(data, details = null) => {
             // Push the data into the Redux store
-            dispatch(setOrigin({
+            dispatch(
+              setOrigin({
               // Gives an object with latitude and longitude
               // Stores it in the Redux store
               location: details.geometry.location,
-              description: data.description
-            }));
+              description: data.description,
+              })
+            );
 
-            dispatch(setDestination(null))
+            dispatch(setDestination(null));
           }}
           fetchDetails={true}
           returnKeyType={"search"}
