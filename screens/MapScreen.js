@@ -8,6 +8,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 const MapScreen = () => {
   const Stack = createStackNavigator();
+  
   return (
     <View>
       <View style={tw`h-1/2`}>
